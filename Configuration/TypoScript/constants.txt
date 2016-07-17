@@ -1,0 +1,30 @@
+plugin.tx_bvtpowermailpdf {
+    settings {
+
+        # cat=plugin.tx_bvtpowermailpdf/activate; type=boolean; label=Enable Powermail PDF
+        activate = 0
+
+        # cat=plugin.tx_bvtpowermailpdf/sourceFile; type=string; label=The path to the pdf to be used of filled out
+        sourceFile = EXT:bvt_powermail_pdf/Resources/Private/PdfTemplate/example.html
+        
+        marker {
+            # cat=plugin.tx_bvtpowermailpdf/pdf_url; type=string; label=Marker for download url field
+            pdf_url = pdf_url
+            # cat=plugin.tx_bvtpowermailpdf/pdf_link; type=string; label=Marker for download link field
+            pdf_link = pdf_link
+            # cat=plugin.tx_bvtpowermailpdf/increment_id; type=string; label=Marker for increment_id
+            increment_id = increment_id
+        }
+        
+        # cat=plugin.tx_bvtpowermailpdf/showDownload; type=boolean; label=Show download link in submit page
+        showDownloadLink = 1
+
+        # cat=plugin.tx_bvtpowermailpdf/fillPdf; type=boolean; label=Fill the pdf?
+        fillPdf = 1
+        
+        email {
+            # cat=plugin.tx_bvtpowermailpdf/attachFile; type=boolean; label=Attach PDF to email
+            attachFile = 0
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="bvt_powermail_pdf">
+        <header/>
+        <body
+            <trans-unit id="downloadLink">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id=">Request Id">
+                <source>Request Id</source>
+            </trans-unit>
+            <trans-unit id="downloadUrl">
+                <source>URL</source>
+            </trans-unit>
+            <trans-unit id="file">
+                <source>File</source>
+            </trans-unit>
+            <trans-unit id="download">
+                <source>Download</source>
+            </trans-unit>
+        </body>
+    </file>
+    <file source-language="de" datatype="plaintext" original="messages" product-name="bvt_powermail_pdf">
+        <header/>
+        <body
+            <trans-unit id="downloadLink">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id=">Request Id">
+                <source>Anfrage Nr.</source>
+            </trans-unit>
+            <trans-unit id="downloadUrl">
+                <source>URL</source>
+            </trans-unit>
+            <trans-unit id="file">
+                <source>Datei</source>
+            </trans-unit>
+            <trans-unit id="download">
+                <source>Download</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

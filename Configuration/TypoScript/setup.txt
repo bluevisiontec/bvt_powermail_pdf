@@ -1,0 +1,63 @@
+plugin.tx_bvtpowermailpdf {
+    view {
+        templateRootPath = {$plugin.tx_bvtpowermailpdf.view.templateRootPath}
+        partialRootPath = {$plugin.tx_bvtpowermailpdf.view.partialRootPath}
+        layoutRootPath = {$plugin.tx_bvtpowermailpdf.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_bvtpowermailpdf.persistence.storagePid}
+    }
+    features {
+        # uncomment the following line to enable the new Property Mapper.
+        # rewrittenPropertyMapper = 1
+    }
+    settings {
+    
+        marker {
+            pdf_url = {$plugin.tx_bvtpowermailpdf.settings.marker.pdf_url}
+            pdf_link = {$plugin.tx_bvtpowermailpdf.settings.marker.pdf_link}
+        }
+        
+        typolink {
+            extTarget = _blank
+        }
+        
+        incremendId {
+            enable = 1
+            calc = "+100000"
+        }
+        
+        activate = {$plugin.tx_bvtpowermailpdf.settings.activate}
+        fillPdf = {$plugin.tx_bvtpowermailpdf.settings.fillPdf}
+        sourceFile = {$plugin.tx_bvtpowermailpdf.settings.sourceFile}
+        fieldMap{
+            #pdfField = PowermailField
+            #firstname = vorname
+            #lastname = nachname
+        }
+        showDownloadLink = {$plugin.tx_bvtpowermailpdf.settings.showDownloadLink}
+        email{
+            attachFile = {$plugin.tx_bvtpowermailpdf.settings.email.attachFile}
+        }
+    }
+}
+
+plugin.tx_bvtpowermailpdf._CSS_DEFAULT_STYLE (
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-t3uk-bvtpowermailpdf table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-t3uk-bvtpowermailpdf table th {
+        font-weight:bold;
+    }
+
+    .tx-t3uk-bvtpowermailpdf table td {
+        vertical-align:top;
+    }
+)
