@@ -7,6 +7,41 @@ plugin.tx_bvtpowermailpdf {
         # cat=plugin.tx_bvtpowermailpdf/sourceFile; type=string; label=The path to the pdf to be used of filled out
         sourceFile = EXT:bvt_powermail_pdf/Resources/Private/PdfTemplate/example.html
         
+        mpdf {
+            # cat=plugin.tx_bvtpowermailpdf/encoding; type=string; label=MPDF encoding
+            encoding = utf-8
+            
+            # cat=plugin.tx_bvtpowermailpdf/pageFormat; type=string; label=MPDF page format
+            pageFormat = A4
+            
+            # cat=plugin.tx_bvtpowermailpdf/defaultFontSize; type=string; label=MPDF default font size
+            defaultFontSize = 
+            
+            # cat=plugin.tx_bvtpowermailpdf/defaultFont; type=string; label=MPDF default font
+            defaultFont = 
+            
+            # cat=plugin.tx_bvtpowermailpdf/marginLeft; type=string; label=MPDF left margin in mm
+            marginLeft = 17
+            
+            # cat=plugin.tx_bvtpowermailpdf/marginRight; type=string; label=MPDF right margin in mm
+            marginRight = 10
+            
+            # cat=plugin.tx_bvtpowermailpdf/marginTop; type=string; label=MPDF top margin in mm
+            marginTop = 10
+            
+            # cat=plugin.tx_bvtpowermailpdf/marginBottom; type=string; label=MPDF bottom margin in mm
+            marginBottom = 10
+            
+            # cat=plugin.tx_bvtpowermailpdf/marginHeader; type=string; label=MPDF header margin in mm
+            marginHeader = 
+            
+            # cat=plugin.tx_bvtpowermailpdf/marginFooter; type=string; label=MPDF footer margin in mm
+            marginFooter = 
+            
+            # cat=plugin.tx_bvtpowermailpdf/orientation; type=string; label=MPDF page orientation
+            orientation = 
+        }
+        
         marker {
             # cat=plugin.tx_bvtpowermailpdf/pdf_url; type=string; label=Marker for download url field
             pdf_url = pdf_url

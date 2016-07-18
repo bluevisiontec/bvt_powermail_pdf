@@ -76,14 +76,8 @@ This is an example configuration.
           }
 
           # Link settings
-          filelink {
-            ATagParams = class="btn btn-default btn-primary"
-            jumpurl = 0
-            jumpurl.secure = 0
-            jumpurl.secure.mimeTypes = pdf=application/pdf
-            icon = 0
-            icon_link = 0
-            target = _blank
+          typolink {
+            extTarget = _blank
           }
 
           # PDF settings
@@ -101,10 +95,10 @@ This is an example configuration.
 You might want to configure PowerMail to add attachments to sender mails:
 
   ::
-  
-    plugin.tx_powermail.settings {
-        sender.attachment = 1
-    }
+
+      plugin.tx_powermail.settings {
+          sender.attachment = 1
+      }
 
     
 Configuration
@@ -116,6 +110,7 @@ Powermail configuration
 """""""""""""""""""""""""
     
 General markers:
+
 - powermail_all : All filled fields
 - pdf_url : URL to generated pdf
 - pdf_linl : Link to generated pdf (typolink)
@@ -130,6 +125,16 @@ Add pdf link to "thank you" page:
     ::
     
     {pdf_link -> f:format.raw()}
+    
+HTML Template for PDF generation
+-------------------------------------------------------------   
+
+See `mPDF documentation <https://mpdf.github.io/>`_ for details.
+    
+Issues
+------------------------------------------------------------- 
+
+Please create issue reports on Github: https://github.com/bluevisiontec/bvt_powermail_pdf
     
 Credits
 -------------------------------------------------------------

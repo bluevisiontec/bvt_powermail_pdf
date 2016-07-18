@@ -50,11 +50,12 @@ class PdfGen extends \In2code\Powermail\Controller\FormController {
      */
     protected function generatePdf(\In2code\Powermail\Domain\Model\Mail $mail)
     {
+        $settings = $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_bvtpowermailpdf.']['settings.'];
         // Use mpdf
         require 'mpdf/mpdf.php';
 
         // Map fields
-        $fieldMap = $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_bvtpowermailpdf.']['settings.']['fieldMap.'];
+        $fieldMap = $settings['fieldMap.'];
         $powermailSettings = $GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_powermail.']['settings.'];
 
         $answers = $mail->getAnswers();
@@ -71,12 +72,12 @@ class PdfGen extends \In2code\Powermail\Controller\FormController {
             }
         }
         
-        if ($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_bvtpowermailpdf.']['settings.']['incremendId.']['enable']) {
+        if ($settings['incremendId.']['enable']) {
                 $answerData['increment_id'] = $this->getIncrementId($mail->getUid());
         }
 
         // load html file here
-        $htmlOriginal = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_bvtpowermailpdf.']['settings.']['sourceFile']);
+        $htmlOriginal = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($settings['sourceFile']);
 
         if (!empty($htmlOriginal)) {
             $info = pathinfo($htmlOriginal);
@@ -84,8 +85,20 @@ class PdfGen extends \In2code\Powermail\Controller\FormController {
 
             // Name for the generated pdf
             $pdfFilename = $powermailSettings['setup.']['misc.']['file.']['folder'].$fileName."_".md5(time()).'.pdf';
-            $mpdf = new \mPDF();
-
+            $mpdf = new \mPDF(
+                $settings['mpdf.']['encoding'],
+                $settings['mpdf.']['pageFormat'],
+                $settings['mpdf.']['defaultFontSize'],
+                $settings['mpdf.']['defaultFont'],
+                $settings['mpdf.']['marginLeft'],
+                $settings['mpdf.']['marginRight'],
+                $settings['mpdf.']['marginTop'],
+                $settings['mpdf.']['marginBottom'],
+                $settings['mpdf.']['marginHeader'],
+                $settings['mpdf.']['marginFooter'],
+                $settings['mpdf.']['orientation']
+            );
+$this->getLogger()->error($settings['mpdf.']['marginLeft']);
             // Fluid standalone view
             $htmlView = $this->objectManager->get('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
             $htmlView->setFormat('html');

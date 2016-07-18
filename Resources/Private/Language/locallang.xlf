@@ -2,7 +2,7 @@
 <xliff version="1.0">
     <file source-language="en" datatype="plaintext" original="messages" product-name="bvt_powermail_pdf">
         <header/>
-        <body
+        <body>
             <trans-unit id="downloadLink">
                 <source>Link</source>
             </trans-unit>
@@ -22,7 +22,7 @@
     </file>
     <file source-language="de" datatype="plaintext" original="messages" product-name="bvt_powermail_pdf">
         <header/>
-        <body
+        <body>
             <trans-unit id="downloadLink">
                 <source>Link</source>
             </trans-unit>

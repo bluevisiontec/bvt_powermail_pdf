@@ -27,6 +27,20 @@ plugin.tx_bvtpowermailpdf {
             calc = "+100000"
         }
         
+        mpdf {
+            encoding = {$plugin.tx_bvtpowermailpdf.settings.mpdf.encoding}
+            pageFormat = {$plugin.tx_bvtpowermailpdf.settings.mpdf.pageFormat}
+            defaultFontSize = {$plugin.tx_bvtpowermailpdf.settings.mpdf.defaultFontSize}
+            defaultFont = {$plugin.tx_bvtpowermailpdf.settings.mpdf.defaultFont}
+            marginLeft = {$plugin.tx_bvtpowermailpdf.settings.mpdf.marginLeft}
+            marginRight = {$plugin.tx_bvtpowermailpdf.settings.mpdf.marginRight}
+            marginTop = {$plugin.tx_bvtpowermailpdf.settings.mpdf.marginTop}
+            marginBottom = {$plugin.tx_bvtpowermailpdf.settings.mpdf.marginBottom}
+            marginHeader = {$plugin.tx_bvtpowermailpdf.settings.mpdf.marginHeader}
+            marginFooter = {$plugin.tx_bvtpowermailpdf.settings.mpdf.marginFooter}
+            orientation = {$plugin.tx_bvtpowermailpdf.settings.mpdf.orientation}
+        }
+        
         activate = {$plugin.tx_bvtpowermailpdf.settings.activate}
         fillPdf = {$plugin.tx_bvtpowermailpdf.settings.fillPdf}
         sourceFile = {$plugin.tx_bvtpowermailpdf.settings.sourceFile}
