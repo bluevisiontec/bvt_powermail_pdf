@@ -20,7 +20,7 @@ EXT: bvt_powermail_pdf
       2010-12-18 19:57
 
 :Changed:
-      2016-07-16 16:30
+      2016-07-19 09:43
 
 :Classification:
       bvt_powermail_pdf
@@ -59,9 +59,11 @@ Installation
 
 TypoScript Configuration
 """""""""""""""""""""""""
-This is an example configuration.
-   ::
 
+This is an example configuration.
+
+   ::
+      
       plugin.tx_bvtpowermailpdf {
         settings {
           # Activate powermail pdf
@@ -95,7 +97,7 @@ This is an example configuration.
 You might want to configure PowerMail to add attachments to sender mails:
 
   ::
-
+      
       plugin.tx_powermail.settings {
           sender.attachment = 1
       }
@@ -113,18 +115,18 @@ General markers:
 
 - powermail_all : All filled fields
 - pdf_url : URL to generated pdf
-- pdf_linl : Link to generated pdf (typolink)
+- pdf_link : Link to generated pdf (typolink)
 - increment_id : An incrementing "request id" based on mail uid
 
 Add pdf url to sender/receiver mail:
     ::
-    
-    {pdf_url -> f:format.raw()}
+      
+      {pdf_url -> f:format.raw()}
     
 Add pdf link to "thank you" page:
     ::
-    
-    {pdf_link -> f:format.raw()}
+      
+      {pdf_link -> f:format.raw()}
     
 HTML Template for PDF generation
 -------------------------------------------------------------   

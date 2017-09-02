@@ -65,6 +65,9 @@ class PdfGen extends \In2code\Powermail\Controller\FormController {
             foreach($answers as $answer){
                 if($value == $answer->getField()->getMarker()){
                     $answerData[$key]  = $answer->getValue();
+                    if(is_array($answer->getValue() ) ) {
+                        $answerData[$key]  = implode(", ", $answer->getValue()); 
+                    }
                     $answerData['powermail_all'] .= 
                         '<b>' . $answer->getField()->getTitle() . ':</b> '
                         . $answer->getValue() . '<br/>';
