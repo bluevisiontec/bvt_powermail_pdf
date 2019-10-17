@@ -12,21 +12,21 @@ plugin.tx_bvtpowermailpdf {
         # rewrittenPropertyMapper = 1
     }
     settings {
-    
+
         marker {
             pdf_url = {$plugin.tx_bvtpowermailpdf.settings.marker.pdf_url}
             pdf_link = {$plugin.tx_bvtpowermailpdf.settings.marker.pdf_link}
         }
-        
+
         typolink {
             extTarget = _blank
         }
-        
+
         incremendId {
             enable = 1
             calc = "+100000"
         }
-        
+
         mpdf {
             encoding = {$plugin.tx_bvtpowermailpdf.settings.mpdf.encoding}
             pageFormat = {$plugin.tx_bvtpowermailpdf.settings.mpdf.pageFormat}
@@ -40,7 +40,7 @@ plugin.tx_bvtpowermailpdf {
             marginFooter = {$plugin.tx_bvtpowermailpdf.settings.mpdf.marginFooter}
             orientation = {$plugin.tx_bvtpowermailpdf.settings.mpdf.orientation}
         }
-        
+
         activate = {$plugin.tx_bvtpowermailpdf.settings.activate}
         fillPdf = {$plugin.tx_bvtpowermailpdf.settings.fillPdf}
         sourceFile = {$plugin.tx_bvtpowermailpdf.settings.sourceFile}

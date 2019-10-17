@@ -4,15 +4,16 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Bvt.' . $_EXTKEY,
+    'Bvt.BvtPowermailPdf',
     'PdfGen',
-    array(
+    [
         'PDF' => 'main',
-    ),
-    array(
+    ],
+    [
         'PDF' => 'main',
-    )
+    ]
 );
+
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher')->connect(
         'In2code\\Powermail\\Controller\\FormController',
         'createActionAfterMailDbSaved',

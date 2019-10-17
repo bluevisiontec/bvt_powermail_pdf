@@ -1,0 +1,42 @@
+{
+  "name": "Bvt/bvt-powermail-pdf",
+  "description": "Adds the possibility to download a generated pdf with input data from powermail. This extension is a fork of 'bw_powermail_mpdf' which is based on 'powermailpdf'",
+  "keywords": [
+    "typo3",
+    "form",
+    "powermail",
+    "pdf"
+  ],
+  "homepage": "https://github.com/bluevisiontec/bvt_powermail_pdf",
+  "authors": [
+    {
+      "name": "Reinhard Schneidewind",
+      "email": "info@bluevisiontec.de"
+    }
+  ],
+  "type": "typo3-cms-extension",
+  "license": "",
+  "require": {
+    "typo3/cms-core": ">=8.7.0 < 10.0.0",
+    "typo3/cms-fluid": "^8.7.0 || ^9.5.99",
+    "typo3/cms-frontend": "^8.7.0 || ^9.5.99",
+    "typo3/cms-fluid-styled-content": "^8.7.0 || ^9.5.99",
+    "typo3-ter/powermail": "2.1.8 || 7.4.99"
+  },
+  "replace": {
+    "bvt_powermail_pdf": "self.version",
+    "typo3-ter/bvt-powermail-pdf": "self.version"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Bvt\\BvtPowermailPdf\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+        "extension-key": "bvt_powermail_pdf"
+    }
+  }
+}
