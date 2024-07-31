@@ -6,7 +6,7 @@
             <trans-unit id="downloadLink">
                 <source>Link</source>
             </trans-unit>
-            <trans-unit id=">Request Id">
+            <trans-unit id=">Request_Id">
                 <source>Request Id</source>
             </trans-unit>
             <trans-unit id="downloadUrl">
@@ -26,7 +26,7 @@
             <trans-unit id="downloadLink">
                 <source>Link</source>
             </trans-unit>
-            <trans-unit id=">Request Id">
+            <trans-unit id=">Request_Id">
                 <source>Anfrage Nr.</source>
             </trans-unit>
             <trans-unit id="downloadUrl">

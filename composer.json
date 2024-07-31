@@ -1,0 +1,54 @@
+{
+    "name": "bvt/bvt-powermail-pdf",
+    "description": "Adds the possibility to download a generated pdf with input data from powermail. This extension is a fork of 'bw_powermail_mpdf' which is based on 'powermailpdf'",
+    "keywords": [
+        "typo3",
+        "form",
+        "powermail",
+        "pdf"
+    ],
+    "homepage": "https://github.com/bluevisiontec/bvt_powermail_pdf, https://www.hauer-heinrich.de",
+    "authors": [
+        {
+            "name": "Reinhard Schneidewind",
+            "email": "info@bluevisiontec.de"
+        },
+        {
+          "name": "Christian Hackl",
+          "email": "web@hauer-heinrich.de"
+      }
+    ],
+    "type": "typo3-cms-extension",
+    "license": "",
+    "require": {
+        "php": "8.1.0 < 8.3.99",
+        "typo3/cms-core": "^11.5.0",
+        "typo3/cms-fluid": "^11.5.0",
+        "typo3/cms-frontend": "^11.5.0",
+        "typo3/cms-fluid-styled-content": "^11.5.0",
+        "typo3-ter/powermail": "10.7.0 < 11.0.0"
+    },
+    "replace": {
+        "bvt_powermail_pdf": "self.version",
+        "typo3-ter/bvt-powermail-pdf": "self.version"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Bvt\\BvtPowermailPdf\\": "Classes",
+            "DeepCopy\\": "vendor/myclabs/deep_copy/src",
+            "paragonie\\random_compat\\": "vendor/paragonie",
+            "php-http\\message-factory\\": "vendor/message-factory",
+            "setasign\\Fpdi\\": "vendor/setasign/fpdi/src",
+            "Mpdf\\PsrHttpMessageShim\\": "vendor/mpdf/psr-http-message-shim/src",
+            "Mpdf\\PsrLogAwareTrait\\": "vendor/mpdf/psr-log-aware-trait/src",
+            "Mpdf\\": "vendor/mpdf/mpdf/src"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bvt_powermail_pdf"
+        }
+    }
+}
